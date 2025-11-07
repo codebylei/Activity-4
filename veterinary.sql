@@ -127,41 +127,33 @@ VALUES
 (9, 9, '2023-05-02 00:00:00', 4, 'Allergic reaction', 'Antihistamines', 'Allergic reaction due to food prescribed antihistamine'),
 (10, 10, '2023-05-20 00:00:00', 6, 'Conjunctivitis', 'Eye drops', 'Prescribed eye drops for conjunctivitis');
 
--- STEP 23: Add column registereddate to owners table
 ALTER TABLE owners
 ADD COLUMN registereddate DATE;
 
--- STEP 24: Rename column paymentdate to paymenttime
 ALTER TABLE invoices
 RENAME COLUMN paymentdate TO paymenttime;
 
--- STEP 25: Remove Simba the cat’s appointment
 DELETE FROM appointments
 WHERE animalid = (
   SELECT animalid FROM animals WHERE animalname = 'Simba'
 );
 
--- STEP 26: Update lastname of Dr. Sofia to Reyes-Gonzales
 UPDATE doctors
 SET lastname = 'Reyes-Gonzales'
 WHERE firstname = 'Sofia';
 
--- STEP 27: List species catered by veterinary
 SELECT DISTINCT species
 FROM animals;
 
--- STEP 28: List total sales of the veterinary
 SELECT SUM(totalamount) AS total_sales
 FROM invoices;
 
--- STEP 29: List total number of appointments made by owner Maria
 SELECT COUNT(*) AS total_appointments
 FROM appointments
 WHERE ownerid = (
   SELECT ownerid FROM owners WHERE firstname = 'Maria'
 );
 
--- STEP 30: List animal with the most appointments
 SELECT a.animalname, COUNT(ap.appointid) AS total_appointments
 FROM animals a
 JOIN appointments ap ON a.animalid = ap.animalid

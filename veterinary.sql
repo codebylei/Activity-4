@@ -145,3 +145,7 @@ WHERE animalid = (
 UPDATE doctors
 SET lastname = 'Reyes-Gonzales'
 WHERE firstname = 'Sofia';
+
+-- STEP 27: List species catered by veterinary
+SELECT DISTINCT species
+FROM animals;

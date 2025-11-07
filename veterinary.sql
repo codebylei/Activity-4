@@ -79,3 +79,15 @@ INSERT INTO doctors (doctorid, firstname, lastname, specialization) VALUES
 (8,'Jose','Torres','Orthopedic'),
 (9,'Angela','Morales','Cardiology'),
 (10,'Nina','Castro','Nutrition');
+
+INSERT INTO appointments (appointid, animalid, doctorid, appointdate, reason) VALUES
+(1,1,1,'2023-01-05 09:00:00','Checkup'),
+(2,2,2,'2023-01-10 14:00:00','Vaccination'),
+(3,3,3,'2023-02-02 11:00:00','Injury'),
+(4,4,4,'2023-02-15 13:30:00','Dental Cleaning'),
+(5,5,5,'2023-03-10 10:30:00','Skin Infection'),
+(6,6,2,'2023-03-10 15:00:00','Flea Treatment'),
+(7,7,5,'2023-04-12 09:00:00','Vaccination'),
+(8,8,3,'2023-04-18 16:00:00','Spaying'),
+(9,9,4,'2023-05-02 14:30:00','Allergy Check'),
+(10,10,6,'2023-05-20 11:15:00','Eye Problem');

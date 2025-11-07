@@ -91,3 +91,8 @@ INSERT INTO appointments (appointid, animalid, doctorid, appointdate, reason) VA
 (8,8,3,'2023-04-18 16:00:00','Spaying'),
 (9,9,4,'2023-05-02 14:30:00','Allergy Check'),
 (10,10,6,'2023-05-20 11:15:00','Eye Problem');
+
+SELECT * FROM owners;
+SELECT * FROM animals;
+SELECT * FROM doctors;
+SELECT * FROM appointments;

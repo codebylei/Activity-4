@@ -153,3 +153,10 @@ FROM animals;
 -- STEP 28: List total sales of the veterinary
 SELECT SUM(totalamount) AS total_sales
 FROM invoices;
+
+-- STEP 29: List total number of appointments made by owner Maria
+SELECT COUNT(*) AS total_appointments
+FROM appointments
+WHERE ownerid = (
+  SELECT ownerid FROM owners WHERE firstname = 'Maria'
+);

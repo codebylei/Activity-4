@@ -67,3 +67,15 @@ INSERT INTO animals (animalid, ownerid, name, species, breed, gender, age) VALUE
 (8,8,'Rocky','Dog','Bulldog','Male',5),
 (9,9,'Coco','Dog','Shih Tzu','Female',2),
 (10,10,'Daisy','Cat','Ragdoll','Female',4);
+
+INSERT INTO doctors (doctorid, firstname, lastname, specialization) VALUES
+(1,'Sofia','Reyes','General Checkup'),
+(2,'Miguel','Lopez','Dermatology'),
+(3,'Carla','Dizon','Surgery'),
+(4,'Antonio','Garcia','Dentistry'),
+(5,'Rosa','Fernandez','Vaccination'),
+(6,'Luis','Gomez','Eye Specialist'),
+(7,'Marites','Santos','Internal Medicine'),
+(8,'Jose','Torres','Orthopedic'),
+(9,'Angela','Morales','Cardiology'),
+(10,'Nina','Castro','Nutrition');

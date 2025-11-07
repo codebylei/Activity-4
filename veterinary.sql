@@ -35,3 +35,11 @@ CREATE TABLE appointments (
   FOREIGN KEY (animalid) REFERENCES animals(animalid),
   FOREIGN KEY (doctorid) REFERENCES doctors(doctorid)
 );
+
+CREATE TABLE invoices (
+  invoiceid INT PRIMARY KEY AUTO_INCREMENT,
+  appointid INT,
+  totalamount DECIMAL(10,2),
+  paymentdate TIME,
+  FOREIGN KEY (appointid) REFERENCES appointments(appointid)
+);

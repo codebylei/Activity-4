@@ -99,7 +99,6 @@ SELECT * FROM appointments;
 
 SHOW CREATE TABLE appointments;
 
--- STEP 21: Insert 10 rows into invoices table
 INSERT INTO invoices (invoiceid, appointid, totalamount, paymentdate)
 VALUES
 (1, 1, 50.00, '09:30:00'),
@@ -113,7 +112,6 @@ VALUES
 (9, 9, 60.00, '14:45:00'),
 (10, 10, 40.00, '11:30:00');
 
--- STEP 22: Insert 10 rows into medicalrecords table
 INSERT INTO medicalrecords (recordid, animalid, recorddate, doctorid, diagnosis, prescription, notes)
 VALUES 
 (1, 1, '2023-01-05 00:00:00', 1, 'Health check', 'N/A', 'Regular checkup, no issue detected'),

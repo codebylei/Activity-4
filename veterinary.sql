@@ -149,3 +149,7 @@ WHERE firstname = 'Sofia';
 -- STEP 27: List species catered by veterinary
 SELECT DISTINCT species
 FROM animals;
+
+-- STEP 28: List total sales of the veterinary
+SELECT SUM(totalamount) AS total_sales
+FROM invoices;

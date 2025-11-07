@@ -160,3 +160,11 @@ FROM appointments
 WHERE ownerid = (
   SELECT ownerid FROM owners WHERE firstname = 'Maria'
 );
+
+-- STEP 30: List animal with the most appointments
+SELECT a.animalname, COUNT(ap.appointid) AS total_appointments
+FROM animals a
+JOIN appointments ap ON a.animalid = ap.animalid
+GROUP BY a.animalname
+ORDER BY total_appointments DESC
+LIMIT 1;

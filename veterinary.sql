@@ -140,3 +140,8 @@ DELETE FROM appointments
 WHERE animalid = (
   SELECT animalid FROM animals WHERE animalname = 'Simba'
 );
+
+-- STEP 26: Update lastname of Dr. Sofia to Reyes-Gonzales
+UPDATE doctors
+SET lastname = 'Reyes-Gonzales'
+WHERE firstname = 'Sofia';

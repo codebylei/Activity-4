@@ -134,3 +134,9 @@ ADD COLUMN registereddate DATE;
 -- STEP 24: Rename column paymentdate to paymenttime
 ALTER TABLE invoices
 RENAME COLUMN paymentdate TO paymenttime;
+
+-- STEP 25: Remove Simba the cat’s appointment
+DELETE FROM appointments
+WHERE animalid = (
+  SELECT animalid FROM animals WHERE animalname = 'Simba'
+);

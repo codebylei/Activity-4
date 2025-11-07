@@ -55,3 +55,15 @@ CREATE TABLE medicalrecords (
   FOREIGN KEY (animalid) REFERENCES animals(animalid),
   FOREIGN KEY (doctorid) REFERENCES doctors(doctorid)
 );
+
+INSERT INTO animals (animalid, ownerid, name, species, breed, gender, age) VALUES
+(1,1,'Whiskers','Cat','Persian','Female',2),
+(2,2,'Buddy','Dog','Labrador','Male',3),
+(3,3,'Simba','Cat','Siamese','Male',1),
+(4,4,'Bella','Dog','Beagle','Female',4),
+(5,5,'Max','Dog','Poodle','Male',2),
+(6,6,'Milo','Cat','Bengal','Male',3),
+(7,7,'Luna','Cat','Maine Coon','Female',1),
+(8,8,'Rocky','Dog','Bulldog','Male',5),
+(9,9,'Coco','Dog','Shih Tzu','Female',2),
+(10,10,'Daisy','Cat','Ragdoll','Female',4);

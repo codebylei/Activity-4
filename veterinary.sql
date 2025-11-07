@@ -96,3 +96,5 @@ SELECT * FROM owners;
 SELECT * FROM animals;
 SELECT * FROM doctors;
 SELECT * FROM appointments;
+
+SHOW CREATE TABLE appointments;

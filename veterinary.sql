@@ -25,3 +25,13 @@ CREATE TABLE doctors (
   lastname VARCHAR(50),
   specialization VARCHAR(100)
 );
+
+CREATE TABLE appointments (
+  appointid INT PRIMARY KEY AUTO_INCREMENT,
+  animalid INT,
+  doctorid INT,
+  appointdate DATETIME,
+  reason VARCHAR(100),
+  FOREIGN KEY (animalid) REFERENCES animals(animalid),
+  FOREIGN KEY (doctorid) REFERENCES doctors(doctorid)
+);

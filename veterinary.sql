@@ -18,3 +18,10 @@ CREATE TABLE animals (
   age INT,
   FOREIGN KEY (ownerid) REFERENCES owners(ownerid)
 );
+
+CREATE TABLE doctors (
+  doctorid INT PRIMARY KEY AUTO_INCREMENT,
+  firstname VARCHAR(50),
+  lastname VARCHAR(50),
+  specialization VARCHAR(100)
+);
